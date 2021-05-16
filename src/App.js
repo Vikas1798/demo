@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
+import Home from "./CompA";
 import './App.css';
-
-function App() {
+ const App = () =>{
+   const [count, setCount] = React.useState(0);
+ 
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="heading">
+     <h1> Demo app count {count}</h1>
+     <br />
+    <Home />
+    <br/>
+      <button  className="button" onClick={()=> setCount(count + 1)}> click to inc </button><br />
+   
     </div>
-  );
-}
+    </div>
+    </>
 
+  );
+};
 export default App;
+
